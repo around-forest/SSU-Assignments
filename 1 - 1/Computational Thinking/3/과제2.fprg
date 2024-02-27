@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kleed"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-23 02:33:22 &#50724;&#54980;"/>
+        <attribute name="created" value="a2xlZWQ766Gc7Jq0OzIwMjEtMDMtMjM7MDI6MTQ6MDkg7Jik7ZuEOzIwNTQwMQ=="/>
+        <attribute name="edited" value="a2xlZWQ766Gc7Jq0OzIwMjEtMDMtMjM7MDI6MzM6MjIg7Jik7ZuEOzE7MjA1NTA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="height" type="Real" array="False" size=""/>
+            <declare name="weight" type="Real" array="False" size=""/>
+            <declare name="standardw" type="Real" array="False" size=""/>
+            <declare name="health" type="Real" array="False" size=""/>
+            <output expression="&quot;&#53412;&#47484; &#51077;&#47141;&#54616;&#49464;&#50836;.&quot;" newline="True"/>
+            <input variable="height"/>
+            <output expression="&quot;&#47800;&#47924;&#44172;&#47484; &#51077;&#47141;&#54616;&#49464;&#50836;.&quot;" newline="True"/>
+            <input variable="weight"/>
+            <assign variable="standardw" expression="(height-100)*0.9"/>
+            <assign variable="health" expression="(weight/standardw)*100"/>
+            <if expression="health &lt;85">
+                <then>
+                    <output expression="&quot;&#54032;&#45800; : &#51200;&#52404;&#51473;&quot;" newline="True"/>
+                    <output expression="&quot;&#51652;&#45800; : &#51228; &#46412;&#50640; &#47566;&#51060; &#47673;&#44256; &#50868;&#46041;&#46020; &#54616;&#49464;&#50836;.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="health &gt;= 85 and health &lt;115">
+                        <then>
+                            <output expression="&quot;&#54032;&#45800; : &#51221;&#49345; &#47800;&#47924;&#44172;&quot;" newline="True"/>
+                            <output expression="&quot;&#51652;&#45800; : &#51648;&#44552; &#52404;&#51473;&#51012; &#51096; &#50976;&#51648;&#54616;&#49464;&#50836;.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="health &gt;=115 and health &lt;130">
+                                <then>
+                                    <output expression="&quot;&#54032;&#45800; : &#44284;&#52404;&#51473;&quot;" newline="True"/>
+                                    <output expression="&quot;&#51652;&#45800; : &#50557;&#44036; &#49332;&#51060; &#51864;&#45348;&#50836;. &#51452; 2&#51068;&#51008; &#50868;&#46041;&#54616;&#49464;&#50836;.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="health &gt;=130">
+                                        <then>
+                                            <output expression="&quot;&#54032;&#45800; : &#48708;&#47564;&quot;" newline="True"/>
+                                            <output expression="&quot;&#51652;&#45800; : &#49885;&#49324;&#47049;&#51012; &#51460;&#51060;&#44256; &#51452; 3&#51068; &#51060;&#49345; &#50868;&#46041;&#54616;&#49464;&#50836;.&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
